@@ -9,7 +9,7 @@ namespace AmbientOcclusion
 
         public void onEnabled()
         {
-            using (WWW www = new WWW(@"file://C:\Users\luukh\Desktop\Parkitect pa 5\pnmods\AmbientOcclusion\shader"))
+            using (WWW www = new WWW(Path + "shader"))
             {
                 if (www.error != null)
                     Debug.Log("Loading had an error:" + www.error);
@@ -60,5 +60,6 @@ namespace AmbientOcclusion
 
         public string Name { get { return "Ambient Occlusion"; } }
         public string Description { get { return "Ambient Occlusion"; } }
+        public string Path { get; set; }
     }
 }
