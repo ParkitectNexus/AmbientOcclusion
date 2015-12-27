@@ -14,6 +14,8 @@ namespace AmbientOcclusion
                 if (www.error != null)
                     Debug.Log("Loading had an error:" + www.error);
 
+                WaitForDownload(www);
+
                 AssetBundle bundle = www.assetBundle;
 
                 Shader shader = bundle.LoadAsset<Shader>("ScreenSpaceAmbientObscurance");
@@ -50,6 +52,14 @@ namespace AmbientOcclusion
                 }
 
                 bundle.Unload(false);
+            }
+        }
+
+        private void WaitForDownload(WWW www)
+        {
+            while (!www.isDone)
+            {
+                // wait
             }
         }
 
