@@ -9,13 +9,11 @@ namespace AmbientOcclusion
 
         public void onEnabled()
         {
-            using (WWW www = new WWW(Path + "shader"))
+            using (WWW www = new WWW("file://" + System.IO.Path.Combine(Path, "shader")))
             {
                 if (www.error != null)
                     Debug.Log("Loading had an error:" + www.error);
-
-                WaitForDownload(www);
-
+                
                 AssetBundle bundle = www.assetBundle;
 
                 Shader shader = bundle.LoadAsset<Shader>("ScreenSpaceAmbientObscurance");
@@ -54,15 +52,7 @@ namespace AmbientOcclusion
                 bundle.Unload(false);
             }
         }
-
-        private void WaitForDownload(WWW www)
-        {
-            while (!www.isDone)
-            {
-                // wait
-            }
-        }
-
+        
         public void onDisabled()
         {
             Object.DestroyImmediate(Camera.main.gameObject.GetComponent<ScreenSpaceAmbientObscurance>());

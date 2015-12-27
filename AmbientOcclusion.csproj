@@ -34,6 +34,7 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\Parkitect_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="UnityEngine">
       <HintPath>..\..\Parkitect_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
@@ -42,6 +43,7 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LICENSE" />
     <None Include="mod.json" />
     <None Include="README.md" />
   </ItemGroup>
