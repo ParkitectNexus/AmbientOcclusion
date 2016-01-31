@@ -1,19 +1,17 @@
 ManifestFileVersion: 0
-CRC: 1624380802
+CRC: 734907786
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 345212bb3c5178a959c364a6d572c5c2
+    Hash: 3c1defbd77dba91809147f51e53b6745
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0ba34f6f9cf4133b9ee308602d72364a
+    Hash: 1094ce4a8b63a0cc7870d736bb694a93
 HashAppended: 0
 ClassTypes:
-- Class: 28
-  Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
 Assets:
 - Assets/Standard Assets/Effects/ImageEffects/Shaders/ScreenSpaceAmbientObscurance.shader
-- Assets/Standard Assets/Effects/ImageEffects/Textures/RandomVectors.png
+- Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/TiltShiftHdrLensBlur.shader
 Dependencies: []

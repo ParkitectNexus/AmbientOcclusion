@@ -19,6 +19,7 @@ namespace AmbientOcclusion
 
         public void onEnabled()
         {
+            Object.Destroy(Camera.main.GetComponent<SSAOPro>());
             using (WWW www = new WWW("file://" + System.IO.Path.Combine(Path, "shader")))
             {
                 if (www.error != null)
